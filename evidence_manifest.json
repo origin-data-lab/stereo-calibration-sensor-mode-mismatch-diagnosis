@@ -1,0 +1,59 @@
+{
+  "note": 13,
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "board comparison numbers",
+      "status": "Verified (automated)",
+      "evidence": [
+        "assets/tables/a7_board_summary.csv",
+        "assets/tables/a7_board_by_radius.csv",
+        "analysis/a7_calibration_mismatch.py"
+      ]
+    },
+    {
+      "id": "C2",
+      "claim": "real clip comparison numbers",
+      "status": "Verified (automated)",
+      "evidence": [
+        "assets/tables/a7_s1_summary.csv",
+        "analysis/a7_s1_matches.csv.gz",
+        "assets/tables/a7_s1_grid.csv"
+      ]
+    },
+    {
+      "id": "C3",
+      "claim": "file-level checks (principal point, resolution, baseline)",
+      "status": "Verified (file contents)",
+      "evidence": [
+        "assets/tables/a7_static_checks.csv"
+      ]
+    },
+    {
+      "id": "C4",
+      "claim": "File A was made in a 16:9 mode",
+      "status": "Interpretation (from parameters; not confirmed by manufacturer)",
+      "evidence": [
+        "C3"
+      ]
+    },
+    {
+      "id": "C5",
+      "claim": "earlier evaluation package bundled File A; a reviewer flagged it",
+      "status": "Verified (package README_CALIBRATION.md v1.5 Rev2) — reviewer not named",
+      "evidence": []
+    }
+  ],
+  "inputs": {
+    "environment": {
+      "python": "3.13.17",
+      "opencv": "4.10.0 (opencv-contrib-python-headless)",
+      "numpy": "2.2.6",
+      "pandas": "3.0.5",
+      "matplotlib": "3.11.2",
+      "os": "Linux x86_64 (CPU only)",
+      "analysis_date": "2026-10-26"
+    },
+    "note": "File serial numbers / device ids are recorded internally, not printed in the note"
+  }
+}
